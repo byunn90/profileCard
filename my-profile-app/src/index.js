@@ -7,32 +7,32 @@ import levi from "./images/92012.jpg";
 const skills = [
   {
     skill: "HTML+CSS",
-    level: ["Beginner", "Intermediate", "Advanced"],
+    level: "advanced",
     color: "#2662EA",
   },
   {
     skill: "JavaScript",
-    level: ["Beginner", "Intermediate", "Advanced"],
+    level: "advanced",
     color: "#EFD81D",
   },
   {
     skill: "Web Design",
-    level: ["Beginner", "Intermediate", "Advanced"],
+    level: "advanced",
     color: "#C3DCAF",
   },
   {
     skill: "Git and GitHub",
-    level: ["Beginner", "Intermediate", "Advanced"],
+    level: "intermediate",
     color: "#E84F33",
   },
   {
     skill: "React",
-    level: ["Beginner", "Intermediate", "Advanced"],
+    level: "beginner",
     color: "#60DAFB",
   },
   {
     skill: "Svelte",
-    level: ["Beginner", "Intermediate", "Advanced"],
+    level: "beginner",
     color: "#FF3B00",
   },
 ];
@@ -71,10 +71,9 @@ function Intro() {
 }
 
 function SkillList() {
-  const skillsData = skills;
   return (
     <div className="skill-list">
-      {skillsData.map((skill) => (
+      {skills.map((skill) => (
         <Skill skill={skill.skill} color={skill.color} level={skill.level} />
       ))}
     </div>
