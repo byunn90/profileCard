@@ -56,7 +56,7 @@ function Avatar() {
   return <img className="avatar" src={levi} alt="attack on Titans" />;
 }
 
-function Intro({ skills }) {
+function Intro() {
   return (
     <div>
       <h1>Kayhan Mamak</h1>
@@ -71,9 +71,10 @@ function Intro({ skills }) {
 }
 
 function SkillList() {
+  const skillsData = skills;
   return (
     <div className="skill-list">
-      {skills.map((skill) => (
+      {skillsData.map((skill) => (
         <Skill skill={skill.skill} color={skill.color} level={skill.level} />
       ))}
     </div>
